@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/avalFragment">
+
+    <fragment
+        android:id="@+id/avalFragment"
+        android:name="ir.MrMohamadHosein.navigationcomponent.AvalFragment"
+        android:label="fragment_aval"
+        tools:layout="@layout/fragment_aval" >
+
+        <action
+            android:id="@+id/action_avalFragment_to_dovomFragment"
+            app:destination="@id/dovomFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dovomFragment"
+        android:name="ir.MrMohamadHosein.navigationcomponent.DovomFragment"
+        android:label="fragment_dovom"
+        tools:layout="@layout/fragment_dovom" >
+        <argument
+            android:name="MyName"
+            app:argType="string"
+            android:defaultValue="no-name" />
+    </fragment>
+
+</navigation>
